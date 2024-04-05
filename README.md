@@ -8,19 +8,19 @@
 
 (3) Enter the docker container as root username
 
-docker exec -it -u root $(whoami)-mitsubatof bash
+`docker exec -it -u root $(whoami)-mitsubatof bash`
 
 (4) Navigate to local directory "run_single_frame" on matlaber (replace dir_name with path)ty
 
-cd dir_name/run_single_frame
+`cd dir_name/run_single_frame`
 
 (5) Run setup.py to install dependencies from within the docker container.
 
-python setup.py
+`python setup.py`
 
 (6) You can run run_scan.py to render a scene. Be sure to adjust the parameters in the file beforehand.
 
-python run_scan.py
+`python run_scan.py`
 
 (7) At some point during the code execution, you will access the docker container as a user. Once this happens, 
 just type ctrl+D to exit. This will complete execution and the files will be saved to whatever global directory
