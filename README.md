@@ -4,7 +4,9 @@
 
 (2) Create a docker container with the image containing MitsubaToF
 
-`docker run --gpus all -dit --shm-size 50G -v /mas/u/$(whoami):/mas/u/$(whoami) -v /u/$(whoami)/:/u/$(whoami) -v /dtmp:/dtmp -v /tmp:/tmp -p $(id -u):8888 -u $(id -u):2000 -e YOUR_HOST=$(hostname) -e YOUR_USERNAME=$(whoami) -e YOUR_UID=$(id -u) --name $(whoami)-mitsubatof zigzagzackey/mitsubatof_pip`
+```
+docker run --gpus all -dit --shm-size 50G -v /mas/u/$(whoami):/mas/u/$(whoami) -v /u/$(whoami)/:/u/$(whoami) -v /dtmp:/dtmp -v /tmp:/tmp -p $(id -u):8888 -u $(id -u):2000 -e YOUR_HOST=$(hostname) -e YOUR_USERNAME=$(whoami) -e YOUR_UID=$(id -u) --name $(whoami)-mitsubatof zigzagzackey/mitsubatof_pip
+```
 
 (3) Enter the docker container as root username
 
